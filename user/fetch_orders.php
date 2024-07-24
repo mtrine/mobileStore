@@ -15,5 +15,5 @@
     
     // Đóng kết nối
     $con->close();
-    echo json_encode($orders);
+    echo json_encode($orders); 
 ?>

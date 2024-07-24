@@ -15,24 +15,19 @@ session_start();
 <body>
     <?php include('./header.php')?>
     <div class="detail-order-container">
-        <h2>Mã đơn hàng-123241241321313131</h2>
-        <div class="detail-order-item">
-            <img src="../images/Iphone15ProMax.jpg">
-            <div>
-                <h3>Iphone 15 ProMax</h3>
-                <p class="price">20.000.000 đ</p>
-            </div>
-            <div>
-                <p>X1</p>
-            </div>
+        <h2 id="orderId">Mã đơn hàng-123241241321313131</h2>
+        <div id="orderItems">
+            <!-- Chi tiết sản phẩm sẽ được thêm vào đây -->
         </div>
-        <div class="order-detail-summary">
+        <div class="order-detail-summary" id="orderSummary">
             <div>
                 <p>Tổng tiền</p>
-                <p class="price">20.000.000 đ</p>
+                <p class="price" id="totalPrice">0 đ</p>
             </div>
         </div>
     </div>
+    <?php include('./footer.php')?>
+    <script src="../js/order_detail.js"></script>
 </body>
 
 </html>

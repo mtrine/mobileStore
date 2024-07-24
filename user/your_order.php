@@ -14,16 +14,11 @@
 
 <body>
     <?php include('./header.php'); ?>
-    <div class="order-container">
-        <div class="order-item" data-id="">
-            <h3>Mã đơn hàng-123241241321313131</h2>
-                <p>Ngày đặt: 22/07/2024</p>
-                <p>Trạng thái: Đang giao hàng</p>
-                <a href="./detail_order.php">Xem chi tiết đơn hàng</a>
-        </div>
-
+    <div class="order-container" id="orderContainer">
+        <!-- Các đơn hàng sẽ được hiển thị ở đây -->
     </div>
     <?php include('./footer.php'); ?>
+    <script src="../js/order.js"></script>
 </body>
 
 </html>

@@ -15,10 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Duyệt qua dữ liệu và thêm vào orderContainer
             data.forEach(function(order) {
+                var status='';
+                if(order.status == "processing"){ 
+                    status = "Đang xử lý";
+                }
+                else if(order.status == "shipping"){
+                    status = "Đang giao hàng";
+                }
+                else{
+                    status = "Đã giao hàng";
+                }
                 var orderItem = `<div class="order-item" data-id="${order.id}">
                     <h3>Mã đơn hàng: ${order.id}</h3>
                     <p>Ngày đặt: ${new Date(order.created_at).toLocaleDateString()}</p>
-                    <p>Trạng thái: ${order.status}</p>
+                    <p>Trạng thái: ${status}</p>
                     <a href="./detail_order.php?id=${order.id}">Xem chi tiết đơn hàng</a>
                 </div>`;
                 orderContainer.insertAdjacentHTML('beforeend', orderItem);
