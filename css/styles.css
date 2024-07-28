@@ -12,10 +12,17 @@ body {
  header {
     background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 70px;
+    position: relative;
+}
+header a img{
+    position: absolute;
+    left: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
 }
 header img {
     height: 80px;
@@ -23,29 +30,62 @@ header img {
 nav {
     display: flex;
     gap: 20px;
+   
 }
 nav a {
+    font-size: 20px;
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
-.search-bar {
+
+.pagination {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
 }
-.search-bar input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+.pagination a, .pagination span {
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
-.search-bar input[type="submit"] {
-    padding: 5px 10px;
-    background-color: #007aff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination span {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.pagination a {
+    color: black;
+}
+
+.pagination a:hover {
+    background-color: gray;
+    color: #fff;
+}
+
+.pagination a:disabled, .pagination span:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination a:first-child, .pagination a:last-child {
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 

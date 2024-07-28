@@ -1,5 +1,6 @@
 <?php
     include '../config.php';
+    session_start();
     $product_id = $_GET['id'];
     $sql= "SELECT * FROM products WHERE id = $product_id";
     $result=$con->query($sql);
@@ -50,12 +51,17 @@
                     <p>1 đổi 1 trong 1 tháng nếu lỗi, đổi sản phẩm tại nhà trong 1 ngày.</p>
                 </div>
 
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                <button class="add-to-cart-button" data-product-id="<?php echo $product['id']; ?>">Thêm vào giỏ
+                    hàng</button>
             </div>
 
             <div class="specifications">
                 <h3>Thông số kỹ thuật</h3>
                 <table>
+                    <tr>
+                        <td>Màu sắc</td>
+                        <td><?php echo $product['color']; ?></td>
+                    </tr>
                     <tr>
                         <td>Kích thước màn hình</td>
                         <td><?php echo $product['screen']; ?></td>
@@ -102,6 +108,7 @@
             </div>
         </div>
     </div>
+    <script src="../js/home.js"></script>
 </body>
 
 </html>

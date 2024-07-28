@@ -17,8 +17,16 @@
         }
         ?>
     </nav>
-    <div class="search-bar">
-        <input type="text" placeholder="Search">
-        <input type="submit" value="Search">
-    </div>
+    <!-- <div class="search-bar">
+        <form action="search.php" method="GET" class="search-container">
+            <input type="text" name="query" placeholder="Search">
+            <button type="submit" class="search-button">
+                <img src="../images/kinhLupIcon.png" alt="Search">
+            </button>
+        </form>
+    </div> -->
 </header>
+
+<?php
+        include('./login.php');
+    ?>

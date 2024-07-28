@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Xóa các đơn hàng hiện có (nếu có)
             orderContainer.innerHTML = '';
-
+            console.log(data);
             // Duyệt qua dữ liệu và thêm vào orderContainer
             data.forEach(function(order) {
                 var status='';

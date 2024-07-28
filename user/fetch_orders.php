@@ -2,7 +2,7 @@
     include('../config.php');
     session_start();
     $user_id = $_SESSION['user_id'];
-    $sql="SELECT * FROM orders WHERE id='$user_id'";
+    $sql="SELECT * FROM orders WHERE user_id='$user_id'";
     $result=$con->query($sql);
     
     $orders= array();
