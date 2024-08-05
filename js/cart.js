@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.cart-item input[type="number"]').forEach(input => {
         input.addEventListener('input', function() {
             const productId = this.closest('.cart-item').querySelector('.delete-btn').dataset.id;
+            console.log(productId);
             const quantity = this.value;
             if (quantity < 1) {
                 this.value = 1; // Đảm bảo số lượng tối thiểu là 1
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', function() {
             const cartItemId = this.dataset.id;
+            console.log(cartItemId);
             fetch('delete_cart_item.php', {
                 method: 'POST',
                 headers: {
@@ -76,6 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Xác nhận đơn hàng
     document.getElementById('confirm-order-btn').addEventListener('click', function() {
         const address = document.getElementById('address').value;
+        const phone = document.getElementById('phone').value;
+        
+        if (phone.trim() === '') {
+            alert('Vui lòng nhập số điện thoại.');
+            return;
+        }
+       
         if (address.trim() === '') {
             alert('Vui lòng nhập địa chỉ giao hàng.');
             return;
@@ -86,12 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'address=' + encodeURIComponent(address)
+            body: 'address=' + encodeURIComponent(address) + '&phoneNumber=' + encodeURIComponent(phone)
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Đơn hàng đã được xác nhận!');
+                alert(encodeURIComponent(phone));
                 window.location.reload();
             } else {
                 alert('Xác nhận đơn hàng thất bại: ' + data.error);

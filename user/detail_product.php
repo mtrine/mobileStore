@@ -28,10 +28,10 @@
     <div class="product-detail">
         <h1><?php echo $product['name']; ?></h1>
         <div class="product-info">
-            <img src="<?php echo $product['image']; ?>">
+            <img src="../images/phonesAndBrandsImages/<?php echo $product['image']; ?>">
             <div class="product-details">
                 <div class="price">
-                    <h3><?php echo $product['price']; ?> đ</h3>
+                    <h3><?php echo number_format($product['price'], 0, ',', '.'); ?> đ</h3>
                 </div>
 
                 <div class="delivery-info">NHẬN HÀNG TRONG 1 GIỜ</div>

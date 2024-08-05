@@ -17,8 +17,10 @@
     <div class="order-container" id="orderContainer">
         <!-- Các đơn hàng sẽ được hiển thị ở đây -->
     </div>
-    <?php include('./footer.php'); ?>
+
     <script src="../js/order.js"></script>
+    <?php include('./footer.php'); ?>
+
 </body>
 
 </html>

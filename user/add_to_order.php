@@ -11,6 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 $address = isset($_POST['address']) ? $_POST['address'] : '';
+$phoneNumber = isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : '';
 
 if (empty($address)) {
     echo json_encode(['success' => false, 'error' => 'Address is required']);
@@ -23,7 +24,7 @@ mysqli_begin_transaction($con);
 try {
     // Insert new order
     $status = 'processing';
-    $order_sql = "INSERT INTO Orders (user_id, address, status) VALUES ('$user_id', '$address','$status')";
+    $order_sql = "INSERT INTO Orders (user_id, address, status,phoneNumber) VALUES ('$user_id', '$address','$status','$phoneNumber')";
     if (!mysqli_query($con, $order_sql)) {
         throw new Exception('Order creation failed: ' . mysqli_error($con));
     }

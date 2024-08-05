@@ -15,8 +15,8 @@
         <?php if (!empty($cart_items)) { ?>
         <?php foreach ($cart_items as $item) { ?>
         <div class="cart-item">
-            <!-- <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['name']; ?>"> -->
-            <img src="../images/Iphone15ProMax.jpg">
+            <img src="../images/phonesAndBrandsImages/<?php echo $item['image']; ?>" alt="<?php echo $item['name']; ?>">
+
             <div>
                 <h3> <?php echo $item['name'] ?></h3>
                 <p class="price" data-price="<?php echo $item['price']; ?>">
@@ -25,7 +25,7 @@
             </div>
             <div>
                 <input type="number" value="<?php echo $item['quantity']; ?>" min="1">
-                <button class="delete-btn" data-id="<?php echo $item['id']; ?>">Xóa</button>
+                <button class="delete-btn" data-id="<?php echo $item['product_id']; ?>">Xóa</button>
             </div>
         </div>
         <?php } ?>
@@ -33,6 +33,10 @@
             <div>
                 <p>Địa chỉ giao hàng:</p>
                 <input type="text" id="address" placeholder="Nhập địa chỉ">
+            </div>
+            <div>
+                <p>Số điện thoại liên lạc:</p>
+                <input type="text" id="phone" placeholder="Nhập số điện thoại">
             </div>
             <div>
                 <p>Tổng tiền</p>
@@ -44,6 +48,8 @@
         <p>Giỏ hàng của bạn đang trống</p>
         <?php } ?>
     </div>
+    <?php include('./footer.php'); ?>
+
 </body>
 <script src="../js/cart.js"></script>
 

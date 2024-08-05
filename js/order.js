@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 var orderItem = `<div class="order-item" data-id="${order.id}">
                     <h3>Mã đơn hàng: ${order.id}</h3>
                     <p>Ngày đặt: ${new Date(order.created_at).toLocaleDateString()}</p>
+                     <p>Địa chỉ: ${order.address}</p>
+                    <p>Số điện thoại: ${order.phoneNumber}</p>
                     <p>Trạng thái: ${status}</p>
                     <a href="./detail_order.php?id=${order.id}">Xem chi tiết đơn hàng</a>
                 </div>`;

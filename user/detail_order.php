@@ -15,7 +15,7 @@ session_start();
 <body>
     <?php include('./header.php')?>
     <div class="detail-order-container">
-        <h2 id="orderId">Mã đơn hàng-123241241321313131</h2>
+        <h2 id="orderId"></h2>
         <div id="orderItems">
             <!-- Chi tiết sản phẩm sẽ được thêm vào đây -->
         </div>

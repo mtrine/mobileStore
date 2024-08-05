@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Duyệt qua dữ liệu và thêm vào orderItems
                 data.forEach(function(item) {
                     var itemHtml = `<div class="detail-order-item">
-                        <img src="../images/${item.image}" alt="${item.product_name}">
+                        <img src="../images/phonesAndBrandsImages/${item.image}" alt="${item.product_name}">
                         <div>
                             <h3>${item.product_name}</h3>
-                            <p class="price">${item.price} đ</p>
+                            <p class="price">${Number(item.price).toLocaleString()} đ</p>
                         </div>
                         <div>
                             <p>X${item.quantity}</p>
