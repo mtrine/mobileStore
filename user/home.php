@@ -121,11 +121,11 @@ else{
     }
     ?>
     </script>
-
-</body>
-<?php
+    <?php
     include('./footer.php');
     $con->close();
     ?>
+</body>
+
 
 </html>

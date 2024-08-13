@@ -141,6 +141,7 @@ nav a:hover {
 .brand-item:hover {
     background-color: #f9f9f9;
 }
+
 .brand-item img {
     max-width: 100px;
     height: auto;
@@ -178,7 +179,7 @@ nav a:hover {
 
 .carousel {
     flex-grow: 1;
- 
+
     background-color: white;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -186,8 +187,7 @@ nav a:hover {
 
 .carousel img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 700px;
     display: none;
 }
 
@@ -208,7 +208,7 @@ nav a:hover {
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
-    
+
 }
 
 .carousel-nav .active {
