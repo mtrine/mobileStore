@@ -1,7 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    /* Ngăn cuộn toàn bộ trang */
+}
+
 .main-content-addProduct {
-    flex:70%;
-    margin: 20px;
     flex-grow: 1;
+    margin-left: 220px;
+    /* Khoảng cách cho slide-bar */
+    padding: 20px;
+    overflow-y: auto;
+    /* Cho phép cuộn nội dung */
+    height: 100vh;
+    /* Đặt chiều cao để đảm bảo nội dung cuộn được */
+    box-sizing: border-box;
 }
 
 .row1 {
@@ -9,11 +25,14 @@
     gap: 20px;
 }
 
-.brand, .general-information, .price {
+.brand,
+.general-information,
+.price {
     margin-bottom: 20px;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"],
+input[type="number"] {
     width: 200px;
     height: 20px;
     padding: 5px;
@@ -31,7 +50,7 @@ input[type="text"], input[type="number"] {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative; 
+    position: relative;
     width: 300px;
     height: 300px;
     border: 2px dashed #7a7a7a;
@@ -40,14 +59,14 @@ input[type="text"], input[type="number"] {
 
 .upload-button input[type="file"] {
     display: file;
-    border:none;
+    border: none;
 }
 
 .upload-button img {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 
@@ -59,13 +78,14 @@ input[type="text"], input[type="number"] {
 }
 
 .upload-button.uploaded {
-    border: none; 
+    border: none;
 }
 
 .upload-button img {
-    display: block; 
+    display: block;
     padding: 10px;
 }
+
 p {
     font-size: 15px;
 }
@@ -78,7 +98,9 @@ p {
     flex: 35%;
 }
 
-.price, .general-information, .brand {
+.price,
+.general-information,
+.brand {
     background-color: #f9f9f9;
     border-radius: 20px;
     padding: 20px;
@@ -92,7 +114,7 @@ p {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    border: 2px dashed #7a7a7a; 
+    border: 2px dashed #7a7a7a;
 }
 
 .main-title {
@@ -119,6 +141,7 @@ option {
     margin: 10px;
     font-size: 13px;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -128,11 +151,13 @@ body {
 }
 
 .slide-bar {
-    display: flex;
-    flex-direction: column;
     width: 220px;
-    height: 100%;
     background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
 }
 
 .logo {
@@ -168,12 +193,12 @@ body {
 }
 
 .option i {
-    margin-right: 10px; 
+    margin-right: 10px;
     font-size: 18px;
 }
 
 .option a:hover i {
-    margin-right: 10px; 
+    margin-right: 10px;
     font-size: 19px;
 }
 
@@ -188,19 +213,19 @@ body {
     background-color: #e7e6e6;
     padding: 4px;
     font-weight: bold;
-    margin-left: 30px; 
+    margin-left: 30px;
     font-size: 10px;
 }
 
 .option a:hover .bx-plus {
     color: white;
-    font-weight: bold; 
-    background-color: black; 
+    font-weight: bold;
+    background-color: black;
     font-size: 11px;
 }
 
 .sub-menu {
-    padding-left: 30px; 
+    padding-left: 30px;
     margin: 5px 0;
     align-items: center;
 }
@@ -218,18 +243,15 @@ body {
 .slide-bar .option a.active {
     font-weight: bold;
     color: black;
-    background-color: #e3e3e3; 
+    background-color: #e3e3e3;
     padding-left: 10px;
-    border-left: 4px solid #007bff; 
+    border-left: 4px solid #007bff;
     font-weight: bold;
 }
 
 .slide-bar .option a.add-product {
-    background-color: black ;
-    color: white; 
+    background-color: black;
+    color: white;
     font-size: 14px;
     font-weight: bold;
 }
-
-
-
