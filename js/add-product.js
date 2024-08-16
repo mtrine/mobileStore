@@ -9,9 +9,25 @@ document.getElementById('file-input').addEventListener('change', function(event)
         reader.onload = function(e) {
             selectedImage.src = e.target.result;
             selectedImage.style.display = 'block';
-            uploadButton.classList.add('uploaded'); // Thêm lớp khi ảnh đã được tải lên
+            uploadButton.classList.add('uploaded');
         };
         
         reader.readAsDataURL(file);
     }
+});
+document.getElementById('add-product-button').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('confirmation-dialog').style.display = 'block';
+});
+
+document.getElementById('confirm-add').addEventListener('click', function() {
+    // Handle the delete action here
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('confirmation-dialog').style.display = 'none';
+    alert('Sản phẩm đã được thêm.'); // Replace with actual delete action
+});
+
+document.getElementById('cancel-add').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('confirmation-dialog').style.display = 'none';
 });

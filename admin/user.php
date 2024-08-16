@@ -19,13 +19,13 @@
                 <a href="#product-management" class="toggle-submenu" data-target="product-management-content" class="product"><i class='bx bx-mobile-alt'></i>Sản phẩm<i class='bx bx-plus'></i></a>
                 <div class="sub-menu" id="product-management-menu">
                     <a href="add-product.php" data-target="add-product-content" class ="add-product"><i class='bx bxs-file-plus'></i>Thêm sản phẩm</a>
-                    <a href="#manage-product" data-target="manage-product-content" class ="manage-product"><i class='bx bx-list-ul' ></i>Danh sách sản phẩm</a>
+                    <a href="list-product.php" data-target="list-product-content" class ="list-product"><i class='bx bx-list-ul' ></i>Danh sách sản phẩm</a>
                 </div>
-                <a href="#order-management" class="toggle-submenu" data-target="order-management-content" class ="order"><i class='bx bxs-cart'></i>Đơn hàng</a>
+                <a href="order.php" class="toggle-submenu" data-target="order-management-content" class ="order"><i class='bx bxs-cart'></i>Đơn hàng</a>
                 <a href="#sign-out" data-target="sign-out-content"><i class='bx bx-log-out'></i>Đăng xuất</a>
             </div>
     </div>
-    <div id="main-content-user">
+    <div id="main-content-user" class ="main-content-user">
         <h2>Danh sách người dùng</h2>
         <button id="delete-button" class="delete-user"><i class='bx bx-trash'></i>Xóa</button>
         <hr>
@@ -37,6 +37,74 @@
                     <td class="header">Họ tên người dùng</td>
                     <td class="header">Email</td>
                     <td class="header">Ngày tạo</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
+                </tr><tr>
+                    <td><input type="checkbox"></td>
+                    <td>123-xyz</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>21/02/2024</td>
                 </tr>
                 <tr>
                     <td><input type="checkbox"></td>
@@ -59,6 +127,6 @@
     </div>
 
     <script src="../js/user.js"></script>
-    <script src="../js/slidebar.js"></script>
+    <script src="../js/slidebar.js"></script>    
 </body>
 </html>

@@ -7,7 +7,7 @@ body {
     overflow: hidden;
 }
 
-.main-content-user {
+.main-content-listProduct {
     flex-grow: 1;
     margin-left: 220px;
     padding: 20px;
@@ -21,11 +21,20 @@ table {
     padding: 20px;
 }
 
-td {
+td, th {
     font-size: 14px;
     text-align: center; 
     padding: 10px;
-    border-bottom: 0.5px solid rgb(197, 197, 197);
+    border: 1px solid #ccc;
+}
+.see-detail{
+    width:90px;
+    height:100px;
+    justify-content: center;
+    background-color: white;
+    border:none;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .header {
@@ -50,7 +59,7 @@ h2 {
     padding-bottom: 20px;
 }
 
-button {
+.delete-product{
     text-align: center;
     width: 100px;
     padding: 10px;
@@ -202,14 +211,12 @@ body {
 }
 
 .sub-menu {
-    display: none; 
     padding-left: 30px; 
     margin: 5px 0;
     align-items: center;
 }
 
 .sub-menu a {
-    display: block;
     padding: 5px;
     color: #626262;
     font-size: 13px;
@@ -228,9 +235,25 @@ body {
     font-weight: bold;
 }
 
-.slide-bar .option a.user {
+.slide-bar .option a.list-product {
     background-color: black ;
     color: white; 
     font-size: 14px;
     font-weight: bold;
+}
+
+.product-image{
+    width:100px;
+    height:150px;
+    object-fit: cover;
+}
+
+.confirmation-dialog button{
+    background-color: black;
+    border-radius: 12px;
+    padding: 10px;
+    padding-left:30px;
+    padding-right:30px;
+    color: white;
+    font-size: 14px;
 }
