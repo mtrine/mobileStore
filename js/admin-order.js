@@ -19,3 +19,10 @@ document.getElementById('cancel').addEventListener('click', function() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('confirmation-dialog').style.display = 'none';
 });
+
+document.querySelectorAll('.see-detail').forEach(button => {
+    button.addEventListener('click', function() {
+        const orderId = this.getAttribute('data-id');
+        window.location.href = `../admin/order-detail.php?id=${orderId}`;
+    });
+});

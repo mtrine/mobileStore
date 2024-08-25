@@ -142,7 +142,7 @@
     ('iPhone XS', 'Space Gray', '5.8" Super Retina OLED', 'iOS 12', '12MP + 12MP', '7MP', 'A12 Bionic', '4GB', '64GB', 'No', '2658mAh', 17990000, 1, 'iphone_xs.jpg');
 
     INSERT INTO Products (name, color, screen, operating_system, rear_camera, front_camera, cpu, ram, internal_storage, memory_card, battery_capacity, price, brand_id, image) VALUES
-    ('Galaxy S21 Ultra', 'Phantom Silver', '6.8" Dynamic AMOLED 2X', 'Android 11', '108MP + 10MP + 10MP + 12MP', '40MP', 'Exynos 2100', '12GB', '256GB', 'Yes', '5000mAh', 29990000, 2, 'galaxy_s21_ultra.jpg'),
+    ('Galaxy S21 Ultra', 'Phantom Silver', '6.8" Dynamic AMOLED 2X', 'Android 11', '108MP + 10MP + 10MP + 12MP', '40MP', 'Exynos 2100', '12GB', '256GB', 'Yes', '5000mAh', 29990000, 2, 'galaxy_s21_ultra.webp'),
     ('Galaxy S21+', 'Phantom Violet', '6.7" Dynamic AMOLED 2X', 'Android 11', '64MP + 12MP + 12MP', '10MP', 'Exynos 2100', '8GB', '128GB', 'Yes', '4800mAh', 24990000, 2, 'galaxy_s21_plus.jpg'),
     ('Galaxy Note 20', 'Mystic Green', '6.7" Super AMOLED Plus', 'Android 10', '64MP + 12MP + 12MP', '10MP', 'Exynos 990', '8GB', '256GB', 'Yes', '4300mAh', 22990000, 2, 'galaxy_note_20.jpg'),
     ('Galaxy Z Flip3', 'Lavender', '6.7" Foldable Dynamic AMOLED 2X', 'Android 11', '12MP + 12MP', '10MP', 'Snapdragon 888', '8GB', '128GB', 'No', '3300mAh', 21990000, 2, 'galaxy_z_flip3.jpg'),

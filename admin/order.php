@@ -40,49 +40,62 @@
                     <td class="header">ID người dùng</td>
                     <td class="header">Địa chỉ giao</td>
                     <td class="header">Số điện thoại</td>
+                    <td class="header">Trạng thái</td>
+                    <td class ="header"></td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>123-xyz</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>21/02/2024</td>
-                </tr>
+
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>123-xyz</td>
                     <td>456-abc</td>
                     <td>02 Võ Oanh Bình Thạnh</td>
                     <td>0123123123</td>
+                    <td>Đang giao</td>
+                    <td><button class ="see-detail" data-id="123-xyz">Xem chi tiết</button></td>
                 </tr>
+
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>123-xyz</td>
                     <td>456-abc</td>
                     <td>02 Võ Oanh Bình Thạnh</td>
                     <td>0123123123</td>
+                    <td>Đang chuẩn bị hàng</td>
+                    <td><button class ="see-detail" data-id="123-xyz">Xem chi tiết</button></td>
                 </tr>
+                
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>123-xyz</td>
                     <td>456-abc</td>
                     <td>02 Võ Oanh Bình Thạnh</td>
                     <td>0123123123</td>
+                    <td>Đang giao</td>
+                    <td><button class ="see-detail" data-id="123-xyz">Xem chi tiết</button></td>
                 </tr>
+                
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>123-xyz</td>
                     <td>456-abc</td>
                     <td>02 Võ Oanh Bình Thạnh</td>
                     <td>0123123123</td>
+                    <td>Giao thành công</td>
+                    <td><button class ="see-detail" data-id="123-xyz">Xem chi tiết</button></td>
                 </tr>
+                
+
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>123-xyz</td>
                     <td>456-abc</td>
                     <td>02 Võ Oanh Bình Thạnh</td>
                     <td>0123123123</td>
+                    <td>Đang giao</td>
+                    <td><button class ="see-detail" data-id="123-xyz">Xem chi tiết</button></td>
                 </tr>
+                
+                
             </table>
         </div>
     </div>
@@ -98,5 +111,6 @@
 
     <script src="../js/admin-order.js"></script>
     <script src="../js/slidebar.js"></script>    
+
 </body>
 </html>

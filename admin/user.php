@@ -21,9 +21,10 @@
                     <a href="add-product.php" data-target="add-product-content" class ="add-product"><i class='bx bxs-file-plus'></i>Thêm sản phẩm</a>
                     <a href="list-product.php" data-target="list-product-content" class ="list-product"><i class='bx bx-list-ul' ></i>Danh sách sản phẩm</a>
                 </div>
-                <a href="order.php" class="toggle-submenu" data-target="order-management-content" class ="order"><i class='bx bxs-cart'></i>Đơn hàng</a>
+                <a href="order.php" data-target="order-management-content" class ="order"><i class='bx bxs-cart'></i>Đơn hàng</a>
                 <a href="#sign-out" data-target="sign-out-content"><i class='bx bx-log-out'></i>Đăng xuất</a>
             </div>
+    </div>
     </div>
     <div id="main-content-user" class ="main-content-user">
         <h2>Danh sách người dùng</h2>
