@@ -19,7 +19,6 @@ session_start();
     </div>
 
     <script src="../js/order.js"></script>
-    <?php include('./footer.php'); ?>
 
 </body>
 

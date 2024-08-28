@@ -89,6 +89,7 @@ if(isset($_POST['signup'])){
     </div>
     <?php include('./footer.php'); ?>
     <script src="../js/register.js"></script>
+    <script src="../js/home.js"></script>
     <script>
     <?php
             if(!empty($message)){

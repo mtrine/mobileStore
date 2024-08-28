@@ -48,7 +48,7 @@
         <p>Giỏ hàng của bạn đang trống</p>
         <?php } ?>
     </div>
-    <?php include('./footer.php'); ?>
+
 
 </body>
 <script src="../js/cart.js"></script>
