@@ -1,16 +1,18 @@
 <?php
-    include '../config.php';
-    session_start();
-    $product_id = $_GET['id'];
-    $sql= "SELECT * FROM products WHERE id = $product_id";
-    $result=$con->query($sql);
-    if($result->num_rows > 0){
-        $product = $result->fetch_assoc();
-    }
-    else{
-        echo "Không tìm thấy sản phẩm";
-        exit();
-    }
+include '../config.php';
+session_start();
+$product_id = $_GET['id'];
+$sql = "SELECT * FROM products WHERE id = $product_id";
+$result = $con->query($sql);
+if ($result->num_rows > 0) {
+    $product = $result->fetch_assoc();
+} else {
+    echo "Không tìm thấy sản phẩm";
+    exit();
+}
+
+// Lấy trạng thái tồn kho
+$isInStock = $product['isInStock'];
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -51,11 +53,16 @@
                     <p>1 đổi 1 trong 1 tháng nếu lỗi, đổi sản phẩm tại nhà trong 1 ngày.</p>
                 </div>
 
+                <?php if ($isInStock): ?>
                 <button class="add-to-cart-button" data-product-id="<?php echo $product['id']; ?>">Thêm vào giỏ
                     hàng</button>
+                <?php else: ?>
+                <button class="add-to-cart-button" disabled style="background-color: gray; cursor: not-allowed;">Hết
+                    hàng</button>
+                <?php endif; ?>
             </div>
 
-            <div class="specifications">
+            <div class=" specifications">
                 <h3>Thông số kỹ thuật</h3>
                 <table>
                     <tr>
@@ -80,35 +87,29 @@
                     </tr>
                     <tr>
                         <td>CPU</td>
-
                         <td><?php echo $product['cpu']; ?></td>
-
                     </tr>
                     <tr>
                         <td>RAM</td>
-
                         <td><?php echo $product['ram']; ?></td>
-
                     </tr>
                     <tr>
                         <td>Bộ nhớ trong</td>
-                        <td>
-                            <?php echo $product['internal_storage']; ?>
-                        </td>
+                        <td><?php echo $product['internal_storage']; ?></td>
                     </tr>
                     <tr>
                         <td>Thẻ nhớ</td>
-                        <td> <?php echo $product['memory_card']; ?></td>
+                        <td><?php echo $product['memory_card']; ?></td>
                     </tr>
                     <tr>
                         <td>Dung lượng pin</td>
-                        <td> <?php echo $product['battery_capacity']; ?></td>
+                        <td><?php echo $product['battery_capacity']; ?></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    <script src="../js/home.js"></script>
+    <script src="../js/product_detail_cus.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ include('../config.php');
 if (isset($_POST['brand_id'])) {
     $brand_id = mysqli_real_escape_string($con, $_POST['brand_id']);
     $price_range = isset($_POST['price']) ? mysqli_real_escape_string($con, $_POST['price']) : 'all';
-    $limit = 15; // Số sản phẩm mỗi trang
+    $limit = 16; // Số sản phẩm mỗi trang
     $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
     $start = ($page - 1) * $limit;
 

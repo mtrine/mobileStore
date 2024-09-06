@@ -33,6 +33,7 @@
     <div id="main-content-listProduct" class="main-content-listProduct">
         <h2>Danh sách sản phẩm</h2>
         <button id="delete-button" class="delete-product"><i class='bx bx-trash'></i>Xóa</button>
+        <button id="update-button" class="update-product"><i class='bx bx-trash'></i>Cập nhật trạng thái</button>
         <hr>
         <div class="container">
             <table id="productTable">

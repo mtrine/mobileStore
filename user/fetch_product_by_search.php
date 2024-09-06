@@ -1,5 +1,6 @@
 <?php
 include('../config.php');
+session_start();
 
 // Pagination logic
 $limit = 16; // Number of products per page
@@ -16,13 +17,16 @@ if ($price_range != 'all') {
     $price_condition = "AND price BETWEEN $min_price AND $max_price";
 }
 
-// Get total number of products for pagination
-$total_results_query = "SELECT COUNT(*) AS count FROM products WHERE 1=1 $price_condition";
+// Get search keyword from GET parameters
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
+// Get total number of products for pagination with search and price filters
+$total_results_query = "SELECT COUNT(*) AS count FROM products WHERE name LIKE '%$search%' $price_condition";
 $total_results = $con->query($total_results_query)->fetch_assoc()['count'];
 $total_pages = ceil($total_results / $limit);
 
-// Fetch products with price range filter
-$product_sql = "SELECT * FROM products WHERE 1=1 $price_condition LIMIT $start, $limit";
+// Fetch products with search, price range filter, and pagination
+$product_sql = "SELECT * FROM products WHERE name LIKE '%$search%' $price_condition LIMIT $start, $limit";
 $product_result = $con->query($product_sql);
 
 $products = [];

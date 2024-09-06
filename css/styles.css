@@ -8,56 +8,7 @@ body {
 }
 :root {}
 
-header {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    height: 70px;
-    position: relative;
-}
-header a img {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-header img {
-    height: 80px;
-}
 
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: block;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    /* Light background on hover */
-    color: red;
-    /* Light text color on hover */
-}
 .pagination {
     display: flex;
     justify-content: center;

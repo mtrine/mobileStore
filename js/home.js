@@ -103,16 +103,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 productsContainer.innerHTML = '';
                 data.products.forEach(product => {
+                    console.log(product.isInStock);
+                    const addButton = product.isInStock ==1
+                        ? `<button class="add-to-cart-button" data-product-id="${product.id}">Thêm vào giỏ hàng</button>` 
+                        : `<button class="add-to-cart-button" disabled style="background-color: gray; cursor: not-allowed;">Đã hết hàng</button>`;
+                    
                     productsContainer.innerHTML += `
                         <div class="product" data-id="${product.id}">
                             <img src="../images/phonesAndBrandsImages/${product.image}">
                             <h2>${product.name}</h2>
                             <p class="new-price">${product.price} đ</p>
-                            <button class="add-to-cart-button" data-product-id="${product.id}">Thêm vào giỏ hàng</button>
+                            ${addButton} <!-- Render the appropriate button -->
                         </div>
                     `;
                 });
-
+    
                 paginationContainer.innerHTML = '';
                 if (page > 1) {
                     paginationContainer.innerHTML += `<a href="#" class="prev-page" data-page="${page - 1}">&laquo; Trước</a>`;
@@ -127,21 +132,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (page < data.total_pages) {
                     paginationContainer.innerHTML += `<a href="#" class="next-page" data-page="${parseInt(page) + 1}">Tiếp &raquo;</a>`;
                 }
-
+    
                 // Add click listeners to newly loaded products
                 addProductClickListeners();
-
+    
                 // Update prices format
                 updateProductPrices();
             })
             .catch(error => console.error('Error:', error));
     }
+    
 
     // Fetch products based on selected price range and page
     const page = new URLSearchParams(window.location.search).get('page') || 1;
     const priceRange = new URLSearchParams(window.location.search).get('price') || 'all';
     fetchAllProducts(page, priceRange);
 
+    document.getElementById('get-all').addEventListener('click', function() {
+    fetchAllProducts(page, priceRange);
+        
+    })
     // Get products from brand
     brandItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -259,4 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
             fetchAllProducts(page);
         }
     });
+
+    
 });

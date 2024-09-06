@@ -2,7 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Lấy order_id từ URL
     const urlParams = new URLSearchParams(window.location.search);
     const orderId = urlParams.get('id');
-
+    function formatPrice(price) {
+        let formattedPrice = parseFloat(price).toFixed(0);
+        formattedPrice = formattedPrice.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        formattedPrice += ' đ';
+        return formattedPrice;
+    }
     if (orderId) {
         document.getElementById('orderId').textContent = `Mã đơn hàng: ${orderId}`;
 
@@ -17,17 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 var orderItems = document.getElementById('orderItems');
                 var totalPrice = 0;
-
+               
                 // Xóa các mục chi tiết đơn hàng hiện có (nếu có)
                 orderItems.innerHTML = '';
 
                 // Duyệt qua dữ liệu và thêm vào orderItems
                 data.forEach(function(item) {
+                    var price =formatPrice(item.price);
                     var itemHtml = `<div class="detail-order-item">
                         <img src="../images/phonesAndBrandsImages/${item.image}" alt="${item.product_name}">
                         <div>
                             <h3>${item.product_name}</h3>
-                            <p class="price">${item.price} đ</p>
+                            <p class="price">${price} </p>
                         </div>
                         <div>
                             <p>X${item.quantity}</p>
@@ -38,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Cập nhật tổng tiền
-                document.getElementById('totalPrice').textContent = `${totalPrice.toLocaleString()} đ`;
+                document.getElementById('totalPrice').textContent = `${formatPrice(totalPrice)} `;
             })
             .catch(error => {
                 console.error('Lỗi khi lấy dữ liệu:', error);

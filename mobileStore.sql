@@ -32,6 +32,7 @@
         price DECIMAL(10, 2) NOT NULL,
         brand_id INT,
         image VARCHAR(255),
+        isInStock bool DEFAULT true,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         FOREIGN KEY (brand_id) REFERENCES Brands(id)
